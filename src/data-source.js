@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const MongoDb = mongodb+srv://prateek005:NwzeITJ31JTGqmYe@cluster0.8qf5p.mongodb.net/dine&dash?retryWrites=true&w=majority&appName=Cluster0;
+const MongoDb = "mongodb+srv://prateek005:NwzeITJ31JTGqmYe@cluster0.8qf5p.mongodb.net/dine&dash?retryWrites=true&w=majority&appName=Cluster0";
 class Database {
     static async connect() {
         try {
