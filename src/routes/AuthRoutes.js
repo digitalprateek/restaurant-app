@@ -6,8 +6,10 @@ const {BadRequestError, AuthenticationError} = require('../core/ApiError');
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const jwt = require('jsonwebtoken')
-const {jwtSecretKey} = require('../configs/jwtConfig');
+// const {jwtSecretKey} = require('../configs/jwtConfig');
 const {isLoggedIn} = require('../middlewares/AuthMiddlewares');
+
+const jwtSecretKey = process.env.jwtSecretKey;
 
 router.post('/signup', catchAsync(async(req, res) => {
     const {username, email, phone, password} = req.body;
