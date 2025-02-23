@@ -2,7 +2,7 @@ module.exports = {
     apps: [
       {
         name: 'restaurant-app',
-        script: 'src/server.js',
+        script: './src/server.js',
         instances: 'max',
         exec_mode: 'cluster',
         max_memory_restart: '1G',
