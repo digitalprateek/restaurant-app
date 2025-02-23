@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
-const { jwtSecretKey } = require("../configs/jwtConfig");
+// const { jwtSecretKey } = require("../configs/jwtConfig");
 const { BadRequestError } = require("../core/ApiError");
+
+const jwtSecretKey = process.env.jwtSecretKey;
 
 const isLoggedIn = async(req, res, next) => {
     const { token } = req.cookies;
