@@ -14,7 +14,7 @@ const cookieParser = require('cookie-parser');
 app.use(express.json());
 app.use(express.urlencoded({extended: true})); //to submit data through form and pass it as json
 app.use(cors({
-    origin: ['http://localhost:5173'],
+    origin: ['https://dineanddashbyprateek.netlify.app'],
     methods: ['GET', 'POST', 'DELETE','PATCH'],
     credentials: true
 }));
