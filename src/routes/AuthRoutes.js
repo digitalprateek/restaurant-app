@@ -59,7 +59,7 @@ router.get('/profile', catchAsync(isLoggedIn), catchAsync(async (req, res) => {
 
 //logout route
 router.post('/logout', catchAsync(isLoggedIn), async(req, res)=>{
-    res.cookie('token', '', { httpOnly: false, maxAge: 1 });
+    res.cookie('token', '', { httpOnly: true, maxAge: 1 });
     res.status(200).json({message: "User logged out successfully"});
 })
 
