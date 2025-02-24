@@ -41,7 +41,7 @@ router.post('/login', catchAsync(async(req, res)=>{
     res.status(200).json({message: "User logged in Successfully"});
 }));
 
-router.get('/profile', catchAsync(async (req, res) => {
+router.get('/profile', catchAsync(isLoggedIn), catchAsync(async (req, res) => {
     const { userId } = req;
     const user = await User.findById(userId);
     if (!user) {
