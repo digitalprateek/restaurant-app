@@ -37,7 +37,7 @@ router.post('/login', catchAsync(async(req, res)=>{
         httpOnly: true,
         maxAge: 7 * 24 * 60 * 60 * 1000,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'Lax'
+        sameSite: 'none'
         // Credentials: true
     });
     res.status(200).json({message: "User logged in Successfully"});
