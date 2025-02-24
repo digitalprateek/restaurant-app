@@ -9,7 +9,8 @@ module.exports = {
         env: {
           NODE_ENV: 'production',
           jwtSecretKey: process.env.jwtSecretKey,
-          dbUrl: process.env.dbUrl
+          dbUrl: process.env.dbUrl,
+          port: process.env.port
         },
       },
     ],
