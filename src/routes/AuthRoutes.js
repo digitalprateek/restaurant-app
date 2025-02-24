@@ -37,6 +37,7 @@ router.post('/login', catchAsync(async(req, res)=>{
         httpOnly: true,
         maxAge: 7 * 24 * 60 * 60 * 1000,
         secure: true,
+        sameSite: 'None'
         // Credentials: true
     });
     res.status(200).json({message: "User logged in Successfully"});
